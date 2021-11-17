@@ -1,6 +1,6 @@
 <?php 
-//abstract class Empleado (comentado para probar)
-class Empleado{
+
+abstract class Empleado{
     private $nombre;
     private $apellido;
     private $numeroSeguridadSocial;
@@ -35,10 +35,7 @@ class Empleado{
         return "Este empleado  $this->nombre $this->apellido con el NSS: $this->numeroSeguridadSocial";
     }
 
-   /* abstract function ingresos(){
-
-     }*/
-
+  /*  abstract function ingresos();*/
 }
 
 
