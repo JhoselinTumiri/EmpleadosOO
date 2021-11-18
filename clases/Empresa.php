@@ -1,5 +1,5 @@
 <?php
-class Empresa extends Empleado{
+class Empresa {
 
     private $empleados;
 
@@ -9,19 +9,19 @@ class Empresa extends Empleado{
    
     function listarEmpleados(){
 
-        $resultado = "Empleados: </br>";
+        $empleados = "";
         foreach($this->empleados as $key => $empleado){
-            $resultado .= $empleado->mostrar()."</br>";
+            $empleados .= $empleado->mostrar()."</br>";
         }
         
-        return $resultado;
+        return $empleados;
     }
 
     function sumaIngresos(){
 
         $total = 0;
         foreach($this->empleados as $key => $empleado){
-               $resultado .= $empleado->ingresos();
+               $total += $empleado->ingresos();
         }
         return $total;
     }

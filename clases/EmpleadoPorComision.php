@@ -7,9 +7,9 @@ class EmpleadoPorComision extends Empleado{
     function __construct($nombre, $apellido, $numeroSeguridadSocial,$horas, $tarifa, $base )
     {
         parent::__construct($nombre, $apellido, $numeroSeguridadSocial);
-        $this->sueldo = $horas;
+        $this->horas= $horas;
         $this->tarifa = $tarifa;
-        $this->dieta = $base;
+        $this->base = $base;
     }
 
     function geHoras(){
@@ -31,11 +31,11 @@ class EmpleadoPorComision extends Empleado{
         $this->base = $base;
     }
     function mostrar(){
-        return parent::mostrar()."</br>Los ingresos son: ". $this->ingresos();
+        return parent::mostrar() .$this->ingresos();
     }
 
     function ingresos(){
-        return $this->base + ($this->horas * $this->tarifa);
+        return   $this->base + ($this->horas * $this->tarifa);
      }
     }   
 ?>

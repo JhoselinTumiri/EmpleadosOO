@@ -23,7 +23,7 @@ class EmpleadoPlantilla extends Empleado{
         $this->sueldo = $sueldo;
     }
     function mostrar(){
-        return parent::mostrar()."</br>Los ingresos son: ". $this->ingresos();
+        return parent::mostrar(). $this->ingresos();
     }
 
     function ingresos(){
